@@ -11,6 +11,7 @@ import {
   createHttpLink,
 } from "@apollo/client"
 import { setContext } from "@apollo/client/link/context";
+import ReducerProvider from './utils/reducerContext';
 
 
 const authLink = setContext((_, { headers }) => {
@@ -34,21 +35,23 @@ const client = new ApolloClient({
 
 function App() {
   return (
-    <div className="App">
-      <ApolloProvider client={client}>
-        <header className="sticky top-0 z-50">
-          <Navbar />
-        </header>
-        <main className='main'>
-          <Router>
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/List" element={<List />} />
-            </Routes>
-          </Router>
-        </main>
-      </ApolloProvider>
-    </div>
+    <ReducerProvider>
+        <div className="App">
+          <ApolloProvider client={client}>
+            <header className="sticky top-0 z-50">
+              <Navbar />
+            </header>
+            <main className='main'>
+              <Router>
+                <Routes>
+                  <Route path="/" element={<Home />} />
+                  <Route path="/List" element={<List />} />
+                </Routes>
+              </Router>
+            </main>
+          </ApolloProvider>
+        </div>
+    </ReducerProvider>
   );
 }
 
