@@ -80,7 +80,7 @@ export default function Home(){
         style={{
           backgroundColor: color,
         }}
-      >
+      >      
           <div className={styles.center}>Landing Page</div>
           <button
             onClick={() => document.location.replace('/list')}

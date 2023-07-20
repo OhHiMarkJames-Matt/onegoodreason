@@ -38,7 +38,7 @@ function App() {
     <ReducerProvider>
         <div className="App">
           <ApolloProvider client={client}>
-            <header className="sticky top-0 z-50">
+            <header className="sticky top-10 z-50">
               <Navbar />
             </header>
             <main className='main'>
