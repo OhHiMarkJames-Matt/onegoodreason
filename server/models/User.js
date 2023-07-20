@@ -21,10 +21,11 @@ const userSchema = new Schema(
       type: String,
       required: true,
     },
-    goodvibesList:{
-        type: String,
-        require: false,
-    },
+    goodVibes:[{
+      type: Schema.Types.ObjectId,
+      ref: "goodVibe"
+    }
+  ],
   
    },
   
