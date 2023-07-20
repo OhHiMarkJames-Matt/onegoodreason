@@ -23,7 +23,7 @@ const userSchema = new Schema(
     },
     goodVibes:[{
       type: Schema.Types.ObjectId,
-      ref: "goodVibe"
+      ref: "GoodVibe"
     }
   ],
   
