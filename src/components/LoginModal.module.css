@@ -1,0 +1,47 @@
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100dvh;
+    width: 100dvw;
+
+    box-shadow: 3px 3px 10px -1px black;
+
+    background-color: rgba(36, 36, 36, 0.7);
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    background: white;
+    border-radius: 20px;
+    padding: 40px 100px 40px 100px;
+    height: 400px;
+    width: 600px;
+    overflow: hidden;
+}
+.header{
+    text-align: center;
+}
+.label{
+    font-size: 16px;
+    font-weight: 600;
+}
+.input{
+    all: unset;
+    height: 45px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding-left: 12px;
+}
+.input:focus{
+    outline: 1px solid gray;
+}
+.accountCreation{
+    display: flex;
+    flex-direction: column;
+}

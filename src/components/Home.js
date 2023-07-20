@@ -1,5 +1,8 @@
+import { ACTIONS } from '../utils/actions';
+import { useDispatchContext, useStateContext } from '../utils/reducerContext';
 import styles from './Home.module.css'
 import { useState, useEffect } from 'react';
+import LoginModal from './LoginModal';
 
 const COLORS = [
     {
@@ -30,6 +33,9 @@ const COLORS = [
   ]
 
 export default function Home(){
+    const state = useStateContext();
+    const dispatch = useDispatchContext();
+
     const [rgb, setRgb] = useState({
       r: COLORS[0].r,
       g: COLORS[0].g,
@@ -82,6 +88,16 @@ export default function Home(){
             Go to list
           </button>
           <div id='good-vibes'></div>
+          <button  
+            id='testForModal' 
+            style={{
+              position: 'absolute',
+              bottom: '100px',
+              right: '100px'
+            }}
+            onClick={()=> dispatch({type: ACTIONS.SET_IS_MODAL_TOGGLED, payload: true})}
+          >ModalTest</button>
+          <LoginModal />
       </main>
     )
   }
