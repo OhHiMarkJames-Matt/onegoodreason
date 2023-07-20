@@ -34,7 +34,7 @@ const resolvers = {
  
     // ---------------------------------- Authentication Mutations ----------------------------------
     loginAsUser: async function (parent, args) {
-      const userv = await User.findOne({
+      const user = await User.findOne({
         $or: [{ username: args.username }, { email: args.email }],
       });
       if (!user) {

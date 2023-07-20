@@ -75,10 +75,13 @@ export default function Home(){
           backgroundColor: color,
         }}
       >
-          <div
-            className={styles.center}
-          >Landing Page
-          </div>
+          <div className={styles.center}>Landing Page</div>
+          <button
+            onClick={() => document.location.replace('/list')}
+          >
+            Go to list
+          </button>
+          <div id='good-vibes'></div>
       </main>
     )
   }

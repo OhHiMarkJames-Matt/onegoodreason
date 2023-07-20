@@ -12,3 +12,7 @@ html,body{
   height: 100dvh;
   min-width: 100%;
 }
+
+.main {
+  height: 100dvh;
+}
